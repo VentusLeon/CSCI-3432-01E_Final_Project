@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Spell Info</title>
+    <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+</head>
+<body>
+
+<h2 th:class="hdr2">All Spell Card Information</h2>
+
+<table th:class="card-table">
+    <thead>
+    <tr>
+        <th>Joint ID</th>
+        <th>Set ID</th>
+        <th>Prefix</th>
+        <th>Card Name</th>
+        <th>Spell Type</th>
+
+        <!-- Add other column headers as needed -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:class="active-row" th:each="data : ${joinedData}">
+        <td th:text="${data.jointId}"></td>
+        <td th:text="${data.setId}"></td>
+        <td th:text="${data.prefix}"></td>
+        <td th:text="${data.cardName}"></td>
+        <td th:text="${data.spellType}"></td>
+
+        <!-- Add other columns' data as needed -->
+    </tr>
+    </tbody>
+</table>
+
+<br>
+
+<a href="/mainPage" class="mainPageBtn">Back to Main Page</a>
+<br>
+</body>
+</html>

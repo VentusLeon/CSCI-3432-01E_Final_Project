@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Set Creation Input Form</title>
+    <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+    <link rel="stylesheet" th:href="@{/input-style.css}">
+</head>
+<body>
+
+<h2 class="hdr2">Enter Custom Set Details:</h2>
+
+<form action="#" th:action="@{/setInput}" th:object="${userInputForm}" method="post">
+    <label for="prefix" class="input-text">Enter Set Prefix:</label>
+    <input type="text" id="prefix" th:field="*{prefix}" required/>
+    <br/>
+
+    <label for="setSize" class="input-text">Enter Set Size:</label>
+    <input type="number" id="setSize" th:field="*{setSize}" required/>
+    <br/>
+
+    <label for="setName" class="input-text">Enter Set Name:</label>
+    <input type="text" id="setName" th:field="*{setName}" required/>
+    <br/>
+
+    <button type="submit" class="btn">Submit</button>
+</form>
+
+</body>
+</html>

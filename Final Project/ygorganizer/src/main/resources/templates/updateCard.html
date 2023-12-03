@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Card Details</title>
+</head>
+<body>
+
+<h2>Update Card: </h2>
+
+<div>
+    <p><strong>Set ID:</strong> <span th:text="${card.setId}"></span></p>
+    <p><strong>Set Prefix:</strong> <span th:text="${card.prefix}"></span></p>
+    <p><strong>Card Name:</strong> <span th:text="${card.cardName}"></span></p>
+    <p><strong>Card Type:</strong> <span th:text="${card.cardType}"></span></p>
+    <p><strong>Card Attribute:</strong> <span th:text="${card.cardAttribute}"></span></p>
+
+
+    <!-- Display other properties of the card -->
+</div>
+
+<form action="/updateCard" method="get">
+    <button type="submit" class="btn">Yes</button>
+</form>
+
+<form action="/getJointId" method="get">
+    <button type="submit" class="btn">No</button>
+</form>
+
+</body>
+</html>

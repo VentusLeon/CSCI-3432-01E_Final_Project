@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Set Creation Results:</title>
+    <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+</head>
+<body>
+
+<h2 class="hdr2">Set Created With the Following Information: </h2>
+
+<p th:text="'Set Prefix: ' + ${userInputForm.prefix}"></p>
+<p th:text="'Set Size: ' + ${userInputForm.setSize}"></p>
+<p th:text="'Set Name: ' + ${userInputForm.setName}"></p>
+
+<br><br>
+<a href="/mainPage" class="mainPageBtn">Back to Main Page</a>
+
+
+</body>
+</html>

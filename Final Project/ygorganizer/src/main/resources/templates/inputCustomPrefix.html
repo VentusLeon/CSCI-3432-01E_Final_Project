@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Card Input Form</title>
+  <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+  <link rel="stylesheet" th:href="@{/input-style.css}">
+</head>
+<body>
+
+<h2 class="hdr2">Add Custom Card Details</h2>
+
+<form action="#" th:action="@{/card/inputCustomPrefix}" th:object="${customPrefixForm}" method="post">
+
+  <!-- Field 3: Prefix (String) -->
+  <label class="input-text" for="prefix">Prefix of the Set You Wish To View:</label>
+  <input type="text" id="prefix" th:field="*{prefix}" required><br>
+
+
+  <br>
+  <button type="submit" class="btn">Submit</button>
+
+</form>
+
+</body>
+</html>

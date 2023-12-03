@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Search Card</title>
+  <link rel="stylesheet" th:href="@{/input-style.css}">
+</head>
+<body>
+<br>
+<br>
+
+<h2 class="hdr2">Enter Joint ID of the Card You Want to Find: </h2>
+
+<br>
+<br>
+
+<form action="#" th:action="@{/searchCard}" method="post">
+  <label for="jointId" class="input-text">Enter Joint ID:</label>
+  <input class="input-box" type="text" id="jointId" name="jointId" th:required="required"><br>
+</form>
+
+</body>
+</html>

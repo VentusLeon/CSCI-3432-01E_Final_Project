@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Card Set Deletion Results:</title>
+  <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+  <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+</head>
+<body>
+
+<h2 class="hdr2">Successfully Deleted Set with Information: </h2>
+
+<p th:text="'Set Prefix: ' + ${userInputForm.prefix}"></p>
+<p th:text="'Set Size: ' + ${userInputForm.setSize}"></p>
+<p th:text="'Set Name: ' + ${userInputForm.setName}"></p>
+
+
+
+<a href="/mainPage" class="mainPageBtn">Back to Main Page</a>
+
+
+</body>
+</html>

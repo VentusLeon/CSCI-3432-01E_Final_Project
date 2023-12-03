@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Delete Card</title>
+  <link rel="stylesheet" th:href="@{/input-style.css}">
+  <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+</head>
+<body>
+<br><br><br>
+<h2 class="hdr2">Enter the Joint ID of the card you would like to remove</h2>
+<br><br>
+<form action="#" th:action="@{/deleteCard}" th:object="${cardJointIdForm}" method="post">
+
+  <!-- Field 1: Joint ID (String) -->
+  <label for="jointId" class="input-text">Joint ID:</label>
+  <input type="text" id="jointId" th:field="*{jointId}" required><br>
+
+  <br>
+  <button type="submit" class="btn">Submit</button>
+
+</form>
+
+</body>
+</html>

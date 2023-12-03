@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Values to Update</title>
+  <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+</head>
+<body>
+
+<h2 class="hdr2">Update Values</h2>
+
+<div th:if="${card != null}">
+  <p th:class="p-style"><strong>Set ID:</strong> <span th:text="${card.setId}"></span></p>
+  <p><strong>Set Prefix:</strong> <span th:text="${card.prefix}"></span></p>
+  <p><strong>Card Type:</strong> <span th:text="${card.cardType}"></span></p>
+  <p><strong>Card Attribute:</strong> <span th:text="${card.cardAttribute}"></span></p>
+  <p><strong>Card Name:</strong> <span th:text="${card.cardName}"></span></p>
+  <p><strong>Card Level:</strong> <span th:text="${card.cardLevel}"></span></p>
+  <p><strong>Card ATK:</strong> <span th:text="${card.cardAtk}"></span></p>
+  <p><strong>Card DEF:</strong> <span th:text="${card.cardDef}"></span></p>
+  <!-- Display other card details -->
+
+  <form action="#" th:action="@{/updateCard}" th:object="${cardInputForm}" method="post">
+    <h3>Enter New Values</h3>
+
+    <label for="jointId" style="font-size:18px;font-weight:bold;font-family:'Roboto',sans-serif">New Joint Id:</label>
+    <input type="text" id="jointId" th:field="*{jointId}" required><br>
+
+    <!-- Field 2: Set ID (int) -->
+    <label for="setId" style="font-size:18px;font-weight:bold;font-family:'Roboto',sans-serif">New Set ID:</label>
+    <input type="number" id="setId" th:field="*{setId}" required><br>
+
+    <!-- Field 3: Prefix (String) -->
+    <label for="prefix" style="font-size:18px;font-weight:bold;font-family:'Roboto',sans-serif">New Prefix:</label>
+    <input type="text" id="prefix" th:field="*{prefix}" required><br>
+
+    <!-- Field 4: Card Type (String) -->
+    <label for="cardType" style="font-size:18px;font-weight:bold;font-family:'Roboto',sans-serif">New Card Type:</label>
+    <input type="text" id="cardType" th:field="*{cardType}" required><br>
+
+    <!-- Field 5: Card Attribute (String) -->
+    <label for="cardAttribute" style="font-size:18px;font-weight:bold;font-family:'Roboto',sans-serif">New Card Attribute:</label>
+    <input type="text" id="cardAttribute" th:field="*{cardAttribute}" required><br>
+
+    <!-- Field 6: Card Name (String) -->
+    <label for="cardName" style="font-size:18px;font-weight:bold;font-family:'Roboto',sans-serif">New Card Name:</label>
+    <input type="text" id="cardName" th:field="*{cardName}" required><br>
+
+    <!-- Field 7: Card Level (int) -->
+    <label for="cardLevel" style="font-size:18px;font-weight:bold;font-family:'Roboto',sans-serif">New Card Level:</label>
+    <input type="number" id="cardLevel" th:field="*{cardLevel}" required><br>
+
+    <!-- Field 8: Card ATK (int) -->
+    <label for="cardAtk" style="font-size:18px;font-weight:bold;font-family:'Roboto',sans-serif">New Card ATK:</label>
+    <input type="number" id="cardAtk" th:field="*{cardAtk}" required><br>
+
+    <!-- Field 9: Card DEF (int) -->
+    <label for="cardDef" style="font-size:18px;font-weight:bold;font-family:'Roboto',sans-serif">New Card DEF:</label>
+    <input type="number" id="cardDef" th:field="*{cardDef}" required><br>
+
+    <!-- Field 10: Is Owned (boolean) -->
+    <label for="isOwned" style="font-size:18px;font-weight:bold;font-family:'Roboto',sans-serif">Is Owned:</label>
+    <select id="isOwned" th:field="*{owned}" required>
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select><br>
+
+
+
+    <!-- Add other checkboxes or input fields for properties to update -->
+
+    <button type="submit" class="btn">Update Selected Values</button>
+  </form>
+
+</div>
+<div th:if="${card == null}">
+  <p>Card not found for provided Joint ID.</p>
+</div>
+
+<br>
+<a href="/mainPage" class="mainPageBtn">Back to Main Page</a>
+
+
+</body>
+</html>

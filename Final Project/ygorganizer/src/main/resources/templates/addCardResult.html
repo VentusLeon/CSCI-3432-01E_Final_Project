@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Card Addition Results:</title>
+    <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+</head>
+<body>
+
+<h2 class="hdr2">Card Addition Results: </h2>
+
+<p class="p-style" th:text="'Joint ID: ' + ${cardInputForm.jointId}"></p>
+<p class="p-style" th:text="'Set ID: ' + ${cardInputForm.setId}"></p>
+<p class="p-style" th:text="'Prefix: ' + ${cardInputForm.prefix}"></p>
+<p class="p-style" th:text="'Type: ' + ${cardInputForm.cardType}"></p>
+<p class="p-style" th:text="'Attribute: ' + ${cardInputForm.cardAttribute}"></p>
+<p class="p-style" th:text="'Name: ' + ${cardInputForm.cardName}"></p>
+<p class="p-style" th:text="'Level: ' + ${cardInputForm.cardLevel}"></p>
+<p class="p-style" th:text="'ATK: ' + ${cardInputForm.cardAtk}"></p>
+<p class="p-style" th:text="'DEF: ' + ${cardInputForm.cardDef}"></p>
+<p class="p-style" th:text="'Owned: ' + ${cardInputForm.isOwned}"></p>
+
+<br>
+
+<a href="/mainPage" class="mainPageBtn">Back to Main Page</a>
+
+
+</body>
+</html>

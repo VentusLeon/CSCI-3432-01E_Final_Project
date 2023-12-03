@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Delete Set</title>
+    <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+    <link rel="stylesheet" th:href="@{/input-style.css}">
+</head>
+<body>
+<br><br><br>
+<h2 class="hdr2">Enter the information of the set you would like to remove</h2>
+<br><br>
+<form action="#" th:action="@{/deleteSet}" th:object="${userInputForm}" method="post">
+
+    <!-- Field 1: Joint ID (String) -->
+    <label for="prefix" class="input-text">Set Prefix:</label>
+    <input type="text" id="prefix" th:field="*{prefix}" required><br>
+
+    <label for="setSize" class="input-text">Set Size:</label>
+    <input type="text" id="setSize" th:field="*{setSize}" required><br>
+
+    <label for="setName" class="input-text">Set Name:</label>
+    <input type="text" id="setName" th:field="*{setName}" required><br>
+
+
+
+    <br>
+    <button type="submit" class="btn">Submit</button>
+
+</form>
+
+</body>
+</html>

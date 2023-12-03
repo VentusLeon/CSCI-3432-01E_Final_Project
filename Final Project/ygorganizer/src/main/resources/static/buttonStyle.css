@@ -1,0 +1,188 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    text-align: center;
+    background-image:
+        linear-gradient(to bottom left,#BB4F4F, #1b1519);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.btn{
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    background: #597C9A;
+    width: 160px;
+    padding: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transform-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+.btn:hover, .btn:focus, .btn:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+.mainPageBtn{
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    background: #474145;
+    width: 160px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transform-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+.mainPageBtn:hover, .mainPageBtn:focus, .mainPageBtn:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+.hdr2 {
+    position: static;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 9700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 3px 1px #919191,
+        1px 1.5px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1.5px 1px #919191,
+    1px 1px 1px rgba(16,16,16,0.4),
+    1px 1px 1px rgba(16,16,16,0.2),
+    1px 1px 1px rgba(16,16,16,0.2),
+    1px 1px 1px rgba(16,16,16,0.4);
+}
+
+.hdr1{
+    position: static;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    font-weight: 9700;
+    color: #f19b54;
+    text-shadow: 1px 1px 1px #000000,
+        1px 2px 1px #000000,
+        1px 3px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 3px 1px #919191,
+        1px 1.5px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1.5px 1px #919191,
+    1px 1px 1px rgba(16,16,16,0.4),
+    1px 1px 1px rgba(16,16,16,0.2),
+    1px 1px 1px rgba(16,16,16,0.2),
+    1px 1px 1px rgba(16,16,16,0.4);
+}
+
+.card-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+}
+
+.card-table thead tr {
+    background-color: #474145;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.card-table th,
+.card-table td {
+    padding: 12px 15px;
+}
+
+.card-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.card-table tbody tr:nth-of-type(even) {
+    background-color: #cfbc9e;
+}
+
+.card-table tbody tr:nth-of-type(odd) {
+background-color: #ECD9BA;
+}
+
+.card-table tbody tr:last-of-type {
+    border-bottom: 2px solid #474145;
+}
+
+.card-table tbody tr.active-row {
+    font-weight: bold;
+    color: #000000;
+}
+
+.text-style{
+    position: static;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 9700;
+    color: #000000;
+    text-shadow: 1px 1px 1px #221f1f,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 3px 1px #919191,
+        1px 1.5px 1px #494343,
+        1px 1px 1px #919191,
+        1px 1.5px 1px #919191,
+    1px 1px 1px rgba(16,16,16,0.4),
+    1px 1px 1px rgba(16,16,16,0.2),
+    1px 1px 1px rgba(16,16,16,0.2),
+    1px 1px 1px rgba(16,16,16,0.4);
+}
+
+.p-style{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+}

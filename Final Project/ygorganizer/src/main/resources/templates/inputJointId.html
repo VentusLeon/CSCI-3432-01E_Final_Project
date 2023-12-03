@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Input Joint ID</title>
+    <link rel="stylesheet" th:href="@{/input-style.css}">
+    <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+
+</head>
+<body>
+<br><br>
+<h2 class="hdr2">Enter Joint ID of the card to be updated: </h2>
+
+<br><br><br>
+<form action="#" th:action="@{/findCard}" method="post">
+    <label for="jointId" style="font-size:18px;font-weight:bold;font-family:'Roboto',sans-serif">Enter Joint ID:</label>
+    <input type="text" id="jointId" name="jointId" th:required="required"><br>
+    <br>
+    <button type="submit" class="btn">Find Card</button>
+</form>
+
+</body>
+</html>

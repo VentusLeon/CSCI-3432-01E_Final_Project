@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Monster Data</title>
+    <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+</head>
+<body>
+
+<h2 th:class="hdr2">All Monster Card Data</h2>
+
+<table th:class="card-table">
+    <thead>
+    <tr>
+        <th>Card Name</th>
+        <th>Card Level</th>
+        <th>Card ATK</th>
+        <th>Card DEF</th>
+        <th>Is Owned</th>
+
+        <!-- Add other table headers for additional fields -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:class="active-row" th:each="entity : ${monsters}">
+        <td th:text="${entity.cardName}"></td>
+        <td th:text="${entity.cardLevel}"></td>
+        <td th:text="${entity.cardAtk}"></td>
+        <td th:text="${entity.cardDef}"></td>
+        <td th:text="${entity.isOwned}"></td>
+
+        <!-- Add other table cells for additional fields -->
+    </tr>
+    </tbody>
+</table>
+
+<a href="/mainPage" class="mainPageBtn">Back to Main Page</a>
+<br>
+</body>
+</html>

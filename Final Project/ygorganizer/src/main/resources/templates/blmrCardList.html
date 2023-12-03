@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>All BLMR Data</title>
+  <link rel="stylesheet" th:href="@{/buttonStyle.css}">
+
+</head>
+<body>
+
+<h2 class="hdr2">Battles of Legend: Monstrous Revenge</h2>
+
+<table th:class="card-table">
+  <thead>
+  <tr>
+    <th>Joint ID</th>
+    <th>Set ID</th>
+    <th>Prefix</th>
+    <th>Card Type</th>
+    <th>Card Attribute</th>
+    <th>Card Name</th>
+    <th> Card Level</th>
+    <th>Card ATK</th>
+    <th>Card DEF</th>
+    <th>Owned</th>
+
+    <!-- Add other table headers for additional fields -->
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:class="active-row" th:each="entity : ${cards}">
+    <td th:text="${entity.jointId}"></td>
+    <td th:text="${entity.setId}"></td>
+    <td th:text="${entity.prefix}"></td>
+    <td th:text="${entity.cardType}"></td>
+    <td th:text="${entity.cardAttribute}"></td>
+    <td th:text="${entity.cardName}"></td>
+    <td th:text="${entity.cardLevel}"></td>
+    <td th:text="${entity.cardAtk}"></td>
+    <td th:text="${entity.cardDef}"></td>
+    <td th:text="${entity.isOwned}"></td>
+
+
+    <!-- Add other table cells for additional fields -->
+  </tr>
+  </tbody>
+</table>
+
+<br>
+
+<p style="font-weight:bold;">Amount Complete</p>
+<p style="font-weight:bold;"><span th:text="${amountOwned}"></span> / 104</p>
+<br>
+<a href="/mainPage" class="mainPageBtn">Back to Main Page</a>
+
+
+</body>
+</html>
